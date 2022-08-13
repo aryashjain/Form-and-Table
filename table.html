@@ -1,0 +1,93 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+    
+			.table{
+font-size: small;
+	}
+</style>
+
+<div id="table">
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>machine_name</th>
+        <th>machine_id</th>
+        <th>current</th>
+		<th>voltage</th>
+		<th>power_factor</th>
+		<th>active_power</th>
+		<th>apparent_power</th>
+		<th>reactive_power</th>
+		<th>daily_energy</th>
+		<th>monthly_energy</th>
+		<th>yearly_energy</th>
+		<th>idle_daily</th>
+		<th>idle_monthly</th>
+		<th>idle_yearly</th>
+	</tr>
+</div>
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+var myData=
+	[{ 'machine_name':'Auto winding machine','machine_id': 'machine 001','current':'0','voltage':'0',
+	'power_factor':'0','active_power':'0','apparent_power':'0',
+	'reactive_power':'0','daily_energy':'0','monthly_energy':'0','yearly_energy':'0',
+	'idle_daily':'0','idle_monthly':'0','idle_yearly':'0'},
+	{
+		'machine_name':'evaporator','machine_id': 'machine 002','current':'0','voltage':'0',
+	'power_factor':'0','active_power':'0','apparent_power':'0',
+	'reactive_power':'0','daily_energy':'5','monthly_energy':'9','yearly_energy':'3','idle_daily':'2',
+	'idle_monthly':'0','idle_yearly':'5'},
+
+	{'machine_name':'Boiler machine','machine_id': 'machine 004','current':'0','voltage':'0',
+	'power_factor':'0','active_power':'0','apparent_power':'0',
+	'reactive_power':'0','daily_energy':'0','monthly_energy':'0',
+	'yearly_energy':'0','idle_daily':'0','idle_monthly':'0','idle_yearly':'0'},
+	            
+	{'machine_name':'machine gun','machine_id': 'machine 007','current':'30','voltage':'20',
+	'power_factor':'0','active_power':'522','apparent_power':'2',
+	'reactive_power':'0','daily_energy':'0','monthly_energy':'9',
+	'yearly_energy':'0','idle_daily':'0','idle_monthly':'2','idle_yearly':'0'},
+	     
+	]
+	buildTable(myData)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].machine_name}</td>
+							<td>${data[i].machine_id}</td>
+							<td>${data[i].current}</td>
+							<td>${data[i].voltage}</td>
+							<td>${data[i].power_factor}</td>
+							<td>${data[i].active_power}</td>
+							<td>${data[i].apparent_power}</td>
+							<td>${data[i].reactive_power}</td>
+							<td>${data[i].daily_energy}</td>
+							<td>${data[i].monthly_energy}</td>
+							<td>${data[i].yearly_energy}</td>
+							<td>${data[i].idle_daily}</td>
+							<td>${data[i].idle_monthly}</td>
+							<td>${data[i].idle_yearly}</td>
+
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>

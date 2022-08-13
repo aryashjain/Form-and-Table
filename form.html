@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1  style="color:rgb(193, 190, 206)">Task 1 Form validation</h1>
+
+    <div class="container">
+              
+
+        <form id="form" action="/">
+            <h1>Enter Your Details</h1>
+            <div class="input-control">
+                <label for="pipelineName">Provide a name for the pipeline:</label>
+                <input id="pipelineName" name="pipelineName" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="projectName">GSC project name:</label>
+                <input id="projectName" name="projectName" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="bucketName">GSC Bucket name:</label>
+                <input id="bucketName" name="bucketName" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="file">Input cloud storage file(s)</label>
+                
+               <div id="filebutton">
+                <input id="file" name="file" type="file" >
+                <div class="error"></div>
+            </div>
+            </div>
+            <div class="input-control">
+                <label for="cred">GSC Credentials</label>
+                <input id="cred" name="cred" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="timer">run every</label>
+                <input id="timer" name="timer" type="text">
+                <div class="error"></div>
+            </div>
+           
+           
+            <button type="submit">create</button>
+            <button type="cancel" onclick="this.form.reset()">cancel</button>
+           
+        </form>
+    </div>
+    <footer>
+    <div class="source"><h7>- ARYASH JAIN <br>6392284940</h4></Select></div>
+    
+</footer>
+</body>
+</html>
